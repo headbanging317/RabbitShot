@@ -69,9 +69,11 @@
 
 	//스나이프의 초기 좌표 
 	var snipeX=0, snipeY=0;
+
 	//총소리 로딩하기
 	var fireSound=new Audio();
 	fireSound.src="sounds/fire.wav";
+
 	//비명소리 로딩하기
 	var screamSound=new Audio();
 	screamSound.src="sounds/birddie.mp3";
@@ -121,6 +123,7 @@
 		}
 		$("#rabbitImg").replaceWith(rabbitImgs[rabbitIndex]);
 	};
+	
 	//토끼 파편 움직이는 함수 
 	var moveFragments=function(){
 		for(var i=0; i<fragments.length; i++){
@@ -138,6 +141,7 @@
 						 obj.y > 550 ;
 		}
 	};
+
 	//화면에서 벗어난 토끼 파편 제거하는 함수 
 	var checkFragments=function(){
 		
@@ -201,6 +205,7 @@
 						eventX < rabbitX+50 &&
 						eventY > rabbitY-50 &&
 						eventY < rabbitY+50 ;
+
 		if(isShooted){
 			//여기가 수행되면 토끼가 총에 맞은것이다.
 			screamSound.play();
